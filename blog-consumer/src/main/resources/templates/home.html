@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>我的主页</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/swipebox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.swipebox.min.js"></script>
+
+	<style>
+		.admin-filter{
+			  height: 81px;
+		}
+		.admin-filter .hot-user img{
+			margin: 3px 20px;
+			border-radius: 50%;
+		}
+		.admin-filter div{
+			float:left;
+		}
+		.admin-filter .span-user{
+			margin: 15px -5px;
+			font-size: 17px;
+		}
+		.admin-filter .edit-user{
+			 margin: 42px -65px;
+			 background-color: #36ca19;
+		}
+		.admin-filter .edit-user a{
+			color: #fff;
+			font-family: "微软雅黑";
+		}
+		.write-content{
+			line-height: 44px;
+		}
+		.hot-user-title img{
+			border-radius: 50%;
+			height: 33px;
+    		margin-top: -14px;
+
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse" role="navigation">
+		    <div class="container">
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle" data-toggle="collapse"
+			                data-target="#example-navbar-collapse">
+			            <span class="sr-only">切换导航</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+			        <a class="navbar-brand" href="#">
+				        <img alt="Brand" class="logo" src="image/logo2.png">
+				    </a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+			        <ul class="nav navbar-nav">
+			            <li class="active"><a href="#">主页</a></li>
+			            <li><a href="#">博文</a></li>
+			            <li><a href="#">WEB</a></li>
+			            <li><a href="#">教程</a></li>
+			            
+			        </ul>
+			        <form class="navbar-form navbar-left frm-seach  hidden-xs hidden-sm">
+			                <input type="text" class="form-control" placeholder="Search">
+			                <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+			        </form>     
+			        <ul class="nav navbar-nav navbar-right sign write-content"> 
+	                    	<li><button class="btn btn-primary">写文章</button></li> 
+	                    	<li><a href="home.html">
+	                    		<div class="hot-user-title">
+									<img src="image/01_100.jpg" class="img-rounded">
+								</div>
+								</a>
+							</li> 
+			        </ul> 
+			       
+			    </div>
+		    </div>
+		</nav>
+	</header>
+	<!-- 内容区域 -->
+	<div class="main container">
+		<div class="row">
+			<!-- 右侧 -->
+			<div class="col-xs-12 col-md-3 side-right" >
+				<div style="background: #fff">
+					<div class="filter admin-filter">
+						<div class="hot-user">
+							<img src="image/01_100.jpg" class="img-rounded">
+						</div>
+						<div class="span-user">梦回起点</div>
+						<div class="edit-user"><a href=""><span class="glyphicon glyphicon-pencil"></span>修改账户</a></div>
+					</div>
+				</div>
+
+				<div style="background: #fff" class="hot-article-parent">
+					<div class="filter">
+						<div class="hot-article">
+							<ul class="list-group">
+								<li class="list-group-item"><a href="">导航</a></li>
+							    <li class="list-group-item">
+							    	<a href=""><span class="glyphicon glyphicon-signal"></span>&nbsp;&nbsp;动态</a>
+							    </li>
+							    <li class="list-group-item">
+							   		 <a href=""><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;我的文章</a>
+							    </li>
+							    <li class="list-group-item">
+							    	<a href=""><span class="glyphicon glyphicon-check"></span>&nbsp;&nbsp;我的评论</a>
+							    </li>
+							    <li class="list-group-item">
+							    	<a href=""><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的喜欢</a>
+							    </li>
+							    <li class="list-group-item">
+							    	<a href=""><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;我的关注</a></li>
+							    <li class="list-group-item">
+							    	<a href=""><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;&nbsp;我的粉丝</a>
+							    </li>
+							     <li class="list-group-item">
+							    	<a href=""><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;通知</a>
+							    </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-9 side-right" style="background: #fff">
+				<div>
+					<div class="filter">
+						<ul  class="nav nav-pills">
+							<li><a href="">动态</a></li>
+						</ul>
+					</div>
+					<div class="new_message_list">
+					<!-- item start -->
+						<div class="new_message_item">
+							<div class="new_msg_head">
+								<div class="user">
+									<div class="ava"><img src="image/01_100.jpg" alt=""></div>
+									<div class="auth_msg">
+										<strong>梦回起点</strong> <br>
+										<time>2017-11-09</time>
+										<time>20小时前</time>
+									</div>
+									<div class="count pull-right">
+										<span><i class="glyphicon glyphicon-heart-empty"></i>&nbsp;0</span>
+										<span><i class="glyphicon glyphicon-link"></i>&nbsp;0</span>
+									</div>
+								</div>
+								
+							</div>
+							<!-- head end -->
+							<div class="new_msg_body">
+								<div class="title">
+									<a href="">
+										<h2 class="h2-title">生活未必多精彩，但必定多彩</h2>
+									</a>
+								</div>
+								<div class="msg_content">
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忙碌的生活，浮躁的心情，有时候我们会忘记这个世界也许比我们以为的要多彩。如果我们愿意让自己偶尔停下脚步，用心看看身边的一切，就会发现这个世界如此可爱。为了让生活的色彩更加浓烈，最近喜欢把照片的背景图成黑白，喜欢用这种方式来提醒自己，原来生活如此多彩，即使我如此平凡。</p>
+									<p class="msg_img">
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-219d0ec8f559fc96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox" >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-219d0ec8f559fc96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-799dc150681659ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox" >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-799dc150681659ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-5d8666c80f0e2115.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox"  >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-5d8666c80f0e2115.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- item end -->
+
+						<!-- item start -->
+						<div class="new_message_item">
+							<div class="new_msg_head">
+								<div class="user">
+									<div class="ava"><img src="image/01_100.jpg" alt=""></div>
+									<div class="auth_msg">
+										<strong>梦回起点</strong> <br>
+										<time>2017-11-09</time>
+										<time>20小时前</time>
+									</div>
+									<div class="count pull-right">
+										<span><i class="glyphicon glyphicon-heart-empty"></i>&nbsp;0</span>
+										<span><i class="glyphicon glyphicon-link"></i>&nbsp;0</span>
+									</div>
+								</div>
+								
+							</div>
+							<!-- head end -->
+							<div class="new_msg_body">
+								<div class="title">
+									<a href="">
+										<h2 class="h2-title">生活未必多精彩，但必定多彩</h2>
+									</a>
+								</div>
+								<div class="msg_content">
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忙碌的生活，浮躁的心情，有时候我们会忘记这个世界也许比我们以为的要多彩。如果我们愿意让自己偶尔停下脚步，用心看看身边的一切，就会发现这个世界如此可爱。为了让生活的色彩更加浓烈，最近喜欢把照片的背景图成黑白，喜欢用这种方式来提醒自己，原来生活如此多彩，即使我如此平凡。</p>
+									<p class="msg_img">
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-219d0ec8f559fc96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox"  >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-219d0ec8f559fc96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-799dc150681659ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox"  >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-799dc150681659ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-5d8666c80f0e2115.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox"  >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-5d8666c80f0e2115.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- item end -->
+
+						<!-- item start -->
+						<div class="new_message_item">
+							<div class="new_msg_head">
+								<div class="user">
+									<div class="ava"><img src="image/01_100.jpg" alt=""></div>
+									<div class="auth_msg">
+										<strong>梦回起点</strong> <br>
+										<time>2017-11-09</time>
+										<time>20小时前</time>
+									</div>
+									<div class="count pull-right">
+										<span><i class="glyphicon glyphicon-heart-empty"></i>&nbsp;0</span>
+										<span><i class="glyphicon glyphicon-link"></i>&nbsp;0</span>
+									</div>
+								</div>
+								
+							</div>
+							<!-- head end -->
+							<div class="new_msg_body">
+								<div class="title">
+									<a href="">
+										<h2 class="h2-title">生活未必多精彩，但必定多彩</h2>
+									</a>
+								</div>
+								<div class="msg_content">
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忙碌的生活，浮躁的心情，有时候我们会忘记这个世界也许比我们以为的要多彩。如果我们愿意让自己偶尔停下脚步，用心看看身边的一切，就会发现这个世界如此可爱。为了让生活的色彩更加浓烈，最近喜欢把照片的背景图成黑白，喜欢用这种方式来提醒自己，原来生活如此多彩，即使我如此平凡。</p>
+									<p class="msg_img">
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-219d0ec8f559fc96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox"  >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-219d0ec8f559fc96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-799dc150681659ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox"  >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-799dc150681659ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+										<a href="http://upload-images.jianshu.io/upload_images/2459311-5d8666c80f0e2115.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"  class="swipebox"  >
+											<img src="http://upload-images.jianshu.io/upload_images/2459311-5d8666c80f0e2115.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="img-thumbnail" alt="image">
+										</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- item end -->
+
+					</div>
+				</div>
+			</div>
+			<!-- 左侧结束 -->
+		</div>
+	</div>
+
+	<footer>
+		<div class="fot-conent"></div>
+	</footer>
+	
+</body>
+<script type="text/javascript">
+    jQuery(function($) {
+        $(".swipebox").swipebox();
+    });
+</script>
+</html>

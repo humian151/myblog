@@ -1,0 +1,12 @@
+server:
+  port: 80
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  jackson:
+      serialization:
+        indent_output: true  #让输入的json更为美观
+  mvc:
+    view:
+      suffix: .html

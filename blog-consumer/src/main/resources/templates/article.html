@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${result.title}"></title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/swipebox.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/jquery.swipebox.min.js"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" class="logo" src="/image/logo2.png">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/index">主页</a></li>
+                    <li  class="active"><a href="javascript:void(0)">博文</a></li>
+                    <li><a href="#">WEB</a></li>
+                    <li><a href="#">教程</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- 内容区域 -->
+<div class="main container">
+    <div class="row">
+        <div class="col-xs-12 col-md-9 side-left" style="background: #fff">
+            <div>
+                <div class="filter">
+                    <ul  class="nav nav-pills">
+                        <li><a href=""><span class="glyphicon glyphicon-book"></span>&nbsp;博文阅览</a></li>
+                    </ul>
+                </div>
+                <div class="jumbotron">
+                    <div class="container">
+                        <div class="page-header">
+                            <h2 class="h2-title">
+                                <span  th:text="${result.title}">生活未必多精彩，但必定多彩 </span>
+                                <small th:text="${result.author}">梦回起点</small>
+                            </h2>
+                        </div>
+
+
+                        <div class="msg_content" th:utext="${result.content}">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="col-xs-12 col-md-3 side-right   hidden-xs hidden-sm" >
+            <div style="background: #fff">
+                <div class="filter">
+                    <ul  class="nav nav-pills">
+                        <li><a href=""><span class="glyphicon glyphicon-th"></span>&nbsp;&nbsp;热门用户</a></li>
+                    </ul>
+                    <div class="hot-user">
+                        <img src="/image/01_100.jpg" class="img-rounded">
+                        <img src="/image/01_100.jpg" class="img-rounded">
+                        <img src="/image/01_100.jpg" class="img-rounded">
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #fff" class="hot-article-parent">
+                <div class="filter">
+                    <div class="hot-article">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href=""><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;热门文章</a></li>
+                            <div>
+                                <li class="list-group-item">
+                                    <a href=""><span class="badge">1</span><span>&nbsp;&nbsp;免费域名注册</span></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href=""><span class="badge">2</span>&nbsp;&nbsp;免费 Window 空间托管</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href=""><span class="badge">3</span>&nbsp;&nbsp;图像的数量</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href=""><span class="badge">4</span>&nbsp;&nbsp;24*7 支持</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href=""><span class="badge">5</span>&nbsp;&nbsp;每年更新成本</a>
+                                </li>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="fot-conent"></div>
+</footer>
+
+</body>
+<script type="text/javascript">
+    jQuery(function($) {
+        $(".swipebox").swipebox();
+    });
+</script>
+</html>
